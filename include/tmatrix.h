@@ -70,6 +70,7 @@ public:
       v.pMem = nullptr;
       this->sz = v.sz;
       v.sz = 0;
+      return *this;
   }
 
   size_t size() const noexcept { return sz; }
