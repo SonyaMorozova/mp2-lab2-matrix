@@ -224,7 +224,7 @@ public:
   TDynamicVector<T> operator*(const TDynamicVector<T>& v) // v - cтолбец 
   {
       if (sz != v.sz) throw "Different vector and matrix size";
-      TDynamicVector res(sz);
+      TDynamicVector<T> res(sz);
       for (int i = 0; i < sz; i++) res[i] = pMem[i] * v;
       return res;
   }
