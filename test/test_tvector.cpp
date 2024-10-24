@@ -203,7 +203,7 @@ TEST(TDynamicVector, can_subtract_vectors_with_equal_size)
         v3[i] = 2 * i;
     }
 
-    ASSERT_NO_THROW(v1 - v2, v3);
+    EXPECT_EQ(v1 - v2, v3);
 }
 
 TEST(TDynamicVector, cant_subtract_vectors_with_not_equal_size)
