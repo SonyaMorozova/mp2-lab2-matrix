@@ -240,3 +240,16 @@ TEST(TDynamicVector, cant_multiply_vectors_with_not_equal_size)
     ASSERT_ANY_THROW(v1 * v2);
 }
 
+TEST(TDynamicVector, can_move_vector) {
+    TDynamicVector<int> v1(5);
+
+   ASSERT_NO_THROW(TDynamicVector<int> v2(move(v1)));
+}
+
+TEST(TDynamicVector, check_memory_of_moved_vector) {
+    TDynamicVector<int> v1(5);
+    TDynamicVector<int> v2(move(v1));
+
+    EXPECT_EQ(0, v1.size());
+}
+
