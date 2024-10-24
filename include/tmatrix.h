@@ -197,7 +197,7 @@ public:
       return this->pMem[row][col];
   }
 
-  const T& at(size_t i, size_t j) const {
+  const T& at(size_t col, size_t row) const {
       if (col < 0 || row < 0 || col >= this->sz || row >= this->sz) throw ("Invalid index value");
       return this->pMem[row][col];
   }
